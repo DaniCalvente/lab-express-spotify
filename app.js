@@ -35,7 +35,7 @@ app.get("/artist-search", (req, res) => {
 
     .searchArtists(req.query.theArtistName)
     .then((data) => {
-      res.render("artist-search-results", { artists: data.body.artists.items });
+      res.render("artist-search", { artists: data.body.artists.items });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
